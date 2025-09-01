@@ -1,20 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BataBit</title>
-    <style>
-        :root {
-            --Linear-BG: #201E1C;
-            --Linear-BG-2: #F7931A;
-            --Bitcoin-Orange: #F7931A;
-            --Warm-Black: #201E1C;
-        }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Batabit - La próxima revolución en el intercambio de criptomonedas." />
+    <title>Batabit</title>
+    <!-- Fuente (puedes cambiarla si el diseño especifica otra) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Estilos Mobile First -->
+    <link rel="stylesheet" href="CSS/mobile.css" />
+    <link rel="stylesheet" href="CSS/tablet.css" />
+    <link rel="stylesheet" href="CSS/desktop.css" />
 </head>
-    
 <body>
+    <header class="hero" id="inicio">
+        <div class="hero__branding">
+            <img class="hero__logo" src="assets/img/logo.svg" alt="Batabit" />
+        </div>
+        <div class="hero__content">
+            <h1 class="hero__title">La próxima revolución en el intercambio de criptomonedas.</h1>
+            <p class="hero__subtitle">Batabit te ayuda a navegar entre los diferentes precios y tendencias.</p>
+            <button class="btn btn--white hero__cta" type="button">
+                <span>Conoce Nuestros Planes</span>
+                <img src="assets/icons/down-arrow.svg" alt="" aria-hidden="true" />
+            </button>
+        </div>
+        <figure class="hero-graphic" aria-hidden="true">
+            <img src="assets/img/Bitcoin.svg" alt="" />
+        </figure>
+    </header>
 
+    <main>
+        <section class="section rates" id="tasas">
+            <div class="section__intro">
+                <h2 class="section__title">Visualizamos todas las tasas de cambio.</h2>
+                <p class="section__desc">Traemos información en tiempo real de las casas de cambio y las monedas más importantes del mundo.</p>
+            </div>
+            <div class="rates-card" aria-labelledby="rates-title">
+                <div class="rates-card__head">
+                    <h3 id="rates-title" class="rates-card__title">Monedas</h3>
+                </div>
+                <ul class="rates-list" role="list">
+                    <li class="rates-item">
+                        <span class="rates-item__name">Bitcoin</span>
+                        <span class="rates-item__value" data-label="Precio">$ 1.96</span>
+                        <img class="rates-item__trend" src="assets/icons/trending-down.svg" alt="Tendencia a la baja" />
+                    </li>
+                    <li class="rates-item">
+                        <span class="rates-item__name">Ethereum</span>
+                        <span class="rates-item__value">$ 0.07</span>
+                        <img class="rates-item__trend" src="assets/icons/trending-up.svg" alt="Tendencia al alza" />
+                    </li>
+                    <li class="rates-item">
+                        <span class="rates-item__name">Ripple</span>
+                        <span class="rates-item__value">$ 2.15</span>
+                        <img class="rates-item__trend" src="assets/icons/trending-down.svg" alt="Tendencia a la baja" />
+                    </li>
+                    <li class="rates-item">
+                        <span class="rates-item__name">Stellar</span>
+                        <span class="rates-item__value">$ 4.96</span>
+                        <img class="rates-item__trend" src="assets/icons/trending-down.svg" alt="Tendencia a la baja" />
+                    </li>
+                </ul>
+                <time class="badge-updated" datetime="2025-07-19T23:45">Actualizado: 19 Julio 23:45</time>
+                <button class="rates-card__nav" type="button" aria-label="Ver siguiente grupo de tablas">
+                    <img src="assets/icons/right-arrow.svg" alt="" aria-hidden="true" />
+                </button>
+            </div>
+        </section>
+
+        <section class="section value-prop section--dark" id="valor">
+            <div class="section__intro">
+                <h2 class="section__title">Creamos un producto sin comparación.</h2>
+                <p class="section__desc">Confiable y diseñado para su uso diario.</p>
+            </div>
+            <div class="features" role="list">
+                <article class="feature-card" role="listitem">
+                    <img class="feature-card__icon" src="assets/icons/clock.svg" alt="" aria-hidden="true" />
+                    <h3 class="feature-card__title">Tiempo real</h3>
+                    <p class="feature-card__text">Nuestro API toma información minuto a minuto sobre las tasas que más determinan el comportamiento.</p>
+                </article>
+                <article class="feature-card" role="listitem">
+                    <img class="feature-card__icon" src="assets/icons/eye.svg" alt="" aria-hidden="true" />
+                    <h3 class="feature-card__title">No hay tasas escondidas</h3>
+                    <p class="feature-card__text">Ni en la compra o al momento de exit, Batabit siempre te muestra el costo real de lo que estás adquiriendo.</p>
+                </article>
+                <article class="feature-card" role="listitem">
+                    <img class="feature-card__icon" src="assets/icons/dollar-sign.svg" alt="" aria-hidden="true" />
+                    <h3 class="feature-card__title">Compara monedas</h3>
+                    <p class="feature-card__text">No más rumores, con Batabit sabrás el valor real de cada moneda en el mercado actual.</p>
+                </article>
+                <article class="feature-card" role="listitem">
+                    <img class="feature-card__icon" src="assets/icons/check-circle.svg" alt="" aria-hidden="true" />
+                    <h3 class="feature-card__title">Información confiable</h3>
+                    <p class="feature-card__text">Nuestras fuentes están 100% verificadas y auditamos su contenido mientras se actualizan.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="promo-banner" id="promo" aria-labelledby="promo-title">
+            <h2 id="promo-title" class="promo-banner__title">Conócelo hoy.</h2>
+        </section>
+
+        <section class="section pricing" id="planes" aria-labelledby="pricing-title">
+            <div class="section__intro">
+                <h2 id="pricing-title" class="section__title">Escoge el plan que mejor se ajuste a ti.</h2>
+                <p class="section__desc">Cualquier plan te da acceso completo a nuestra plataforma.</p>
+            </div>
+            <div class="pricing-scroll" role="list">
+                <article class="pricing-card pricing-card--featured" role="listitem" aria-label="Plan anual recomendado">
+                    <span class="badge badge--accent">Recomendado</span>
+                    <h3 class="pricing-card__label">Pago Anual</h3>
+                        <p class="pricing-card__price"><span class="currency">$</span><span class="amount">99</span></p>
+                    <p class="pricing-card__note">*Ahorras $129 comparado al plan mensual.</p>
+                    <button class="btn btn--outline pricing-card__cta" type="button">Escoger este <img src="assets/icons/orange-right-arrow.svg" alt="" aria-hidden="true" /></button>
+                </article>
+                <article class="pricing-card" role="listitem" aria-label="Plan mensual">
+                    <h3 class="pricing-card__label">Pago Mensual</h3>
+                    <p class="pricing-card__price"><span class="currency">$</span><span class="amount">15</span></p>
+                    <p class="pricing-card__note">Acceso completo mientras estés suscrito.</p>
+                    <button class="btn btn--outline pricing-card__cta" type="button">Escoger este <img src="assets/icons/orange-right-arrow.svg" alt="" aria-hidden="true" /></button>
+                </article>
+                <article class="pricing-card" role="listitem" aria-label="Plan corporativo">
+                    <h3 class="pricing-card__label">Empresas</h3>
+                    <p class="pricing-card__price"><span class="currency">$</span><span class="amount">249</span></p>
+                    <p class="pricing-card__note">Soporte dedicado y SLAs personalizados.</p>
+                    <button class="btn btn--outline pricing-card__cta" type="button">Contactar <img src="assets/icons/orange-right-arrow.svg" alt="" aria-hidden="true" /></button>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="footer">
+        <nav aria-label="Enlaces de pie" class="footer-nav">
+            <ul class="footer-links">
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">Crunchbase</a></li>
+                <li><a href="#">Hackernnews</a></li>
+            </ul>
+        </nav>
+        <div class="footer-brand">
+            <img src="assets/img/logo-footer.svg" alt="Batabit" class="footer-brand__logo" />
+            <small class="footer-brand__copy">© Batabit 2025</small>
+        </div>
+    </footer>
 </body>
 </html>
