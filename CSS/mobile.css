@@ -309,7 +309,7 @@ p {
     text-align: center; 
     color: var(--color-white); 
     padding: var(--space-8) var(--space-5); 
-    background: linear-gradient(180deg, rgba(32,30,28,0.4) 0%, rgba(247, 148, 26, 0.107) 100%), url('../assets/img/bitcoinbaby.jpg') center/cover no-repeat; 
+    background: linear-gradient(180deg, rgba(32,30,28,0.4) 0%, rgba(247, 148, 26, 0.107) 100%), url('../assets/img/bitcoinbaby2x.jpg') center/cover no-repeat; 
 }
 .promo-banner__title { 
     font-size: 22px; 
@@ -376,6 +376,7 @@ p {
     font-size: 11px; 
     text-transform: uppercase; 
     letter-spacing: .5px; 
+    margin-bottom: 8px;
     font-weight: 600; 
     padding: 4px 8px; 
     border-radius: var(--radius-sm); 
