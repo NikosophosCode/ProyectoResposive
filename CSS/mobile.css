@@ -149,6 +149,7 @@ p {
 	box-shadow: var(--shadow-card); 
 	z-index: 10; 
 	width: max-content; 
+    text-decoration: none;
 }
 /* Ajuste del espacio inferior del hero para que el botón no tape contenido */
 .hero { 
@@ -319,9 +320,12 @@ p {
 .pricing-scroll { 
     display: flex; 
     gap: var(--space-6); 
+    /* Permit scroll solo en eje X sin recortar el badge que sobresale verticalmente */
     overflow-x: auto; 
-    scroll-snap-type: x mandatory; 
-    padding-bottom: 6px; 
+    overflow-y: visible; 
+    scroll-snap-type: x proximity;
+    overscroll-behavior-x: contain; 
+    padding: 16px 0 6px; 
 }
 .pricing-scroll::-webkit-scrollbar { 
     height: 8px; 
@@ -334,8 +338,9 @@ p {
     scroll-snap-align: center; 
     background: var(--color-white); 
     border-radius: var(--radius-md); 
-    padding: var(--space-6) var(--space-5); 
-    min-width: 240px; 
+    /* Añadimos espacio extra arriba para que el contenido no quede tapado por el badge centrado */
+    padding: calc(var(--space-6) + 14px) var(--space-5) var(--space-6); 
+    min-width: 216px; 
     box-shadow: var(--shadow-card); 
     position: relative; 
     display: flex; 
@@ -372,15 +377,21 @@ p {
     margin-top: auto; 
 }
 
-.badge { 
+.badge {
+    position: absolute;
+    /* Centramos el badge respecto al ancho de la tarjeta y lo "partimos" por la mitad sobre el borde superior */
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 11px; 
     text-transform: uppercase; 
     letter-spacing: .5px; 
-    margin-bottom: 8px;
     font-weight: 600; 
-    padding: 4px 8px; 
+    padding: 4px 10px; 
     border-radius: var(--radius-sm); 
     display: inline-block; 
+    white-space: nowrap;
+    pointer-events: none; /* decorativo */
 }
 .badge--accent { 
     background: var(--color-orange); 
