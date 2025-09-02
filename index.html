@@ -39,36 +39,63 @@
                 <h2 class="section__title">Visualizamos todas las tasas de cambio.</h2>
                 <p class="section__desc">Traemos información en tiempo real de las casas de cambio y las monedas más importantes del mundo.</p>
             </div>
-            <div class="rates-card" aria-labelledby="rates-title">
-                <div class="rates-card__head">
-                    <h3 id="rates-title" class="rates-card__title">Monedas</h3>
-                </div>
-                <ul class="rates-list" role="list">
-                    <li class="rates-item">
-                        <span class="rates-item__name">Bitcoin</span>
-                        <span class="rates-item__value" data-label="Precio">$ 1.96</span>
-                        <img class="rates-item__trend" src="assets/icons/trending-down.svg" alt="Tendencia a la baja" />
-                    </li>
-                    <li class="rates-item">
-                        <span class="rates-item__name">Ethereum</span>
-                        <span class="rates-item__value">$ 0.07</span>
-                        <img class="rates-item__trend" src="assets/icons/trending-up.svg" alt="Tendencia al alza" />
-                    </li>
-                    <li class="rates-item">
-                        <span class="rates-item__name">Ripple</span>
-                        <span class="rates-item__value">$ 2.15</span>
-                        <img class="rates-item__trend" src="assets/icons/trending-down.svg" alt="Tendencia a la baja" />
-                    </li>
-                    <li class="rates-item">
-                        <span class="rates-item__name">Stellar</span>
-                        <span class="rates-item__value">$ 4.96</span>
-                        <img class="rates-item__trend" src="assets/icons/trending-down.svg" alt="Tendencia a la baja" />
-                    </li>
-                </ul>
-                <time class="badge-updated" datetime="2025-07-19T23:45">Actualizado: 19 Julio 23:45</time>
-                <button class="rates-card__nav" type="button" aria-label="Ver siguiente grupo de tablas">
-                    <img src="assets/icons/right-arrow.svg" alt="" aria-hidden="true" />
-                </button>
+            <div class="rates-scroll" role="list">
+                <article class="rates-card" role="listitem" aria-labelledby="rates-title">
+                    <div class="rates-card__head">
+                        <h3 id="rates-title" class="rates-card__title">Monedas</h3>
+                    </div>
+                    <ul class="rates-list" role="list">
+                        <li class="rates-item">
+                            <span class="rates-item__name">Bitcoin</span>
+                            <span class="rates-item__value" data-label="Precio">$ 1.96</span>
+                            <img class="rates-item__trend" src="assets/icons/trending-down.svg" alt="Tendencia a la baja" />
+                        </li>
+                        <li class="rates-item">
+                            <span class="rates-item__name">Ethereum</span>
+                            <span class="rates-item__value">$ 0.07</span>
+                            <img class="rates-item__trend" src="assets/icons/trending-up.svg" alt="Tendencia al alza" />
+                        </li>
+                        <li class="rates-item">
+                            <span class="rates-item__name">Ripple</span>
+                            <span class="rates-item__value">$ 2.15</span>
+                            <img class="rates-item__trend" src="assets/icons/trending-down.svg" alt="Tendencia a la baja" />
+                        </li>
+                        <li class="rates-item">
+                            <span class="rates-item__name">Stellar</span>
+                            <span class="rates-item__value">$ 4.96</span>
+                            <img class="rates-item__trend" src="assets/icons/trending-down.svg" alt="Tendencia a la baja" />
+                        </li>
+                    </ul>
+                    <time class="badge-updated" datetime="2025-07-19T23:45">Actualizado: 19 Julio 23:45</time>
+                </article>
+                <article class="rates-card" role="listitem" aria-labelledby="fees-title">
+                    <div class="rates-card__head">
+                        <h3 id="fees-title" class="rates-card__title">Comisiones</h3>
+                    </div>
+                    <ul class="rates-list" role="list">
+                        <li class="rates-item rates-item--two-col">
+                            <span class="rates-item__name">Bitrade</span>
+                            <span class="rates-item__value">$ 12.96</span>
+                            <span class="rates-item__spacer" aria-hidden="true"></span>
+                        </li>
+                        <li class="rates-item rates-item--two-col">
+                            <span class="rates-item__name">Bitpreco</span>
+                            <span class="rates-item__value">$ 13.07</span>
+                            <span class="rates-item__spacer" aria-hidden="true"></span>
+                        </li>
+                        <li class="rates-item rates-item--two-col">
+                            <span class="rates-item__name">Novadax</span>
+                            <span class="rates-item__value">$ 13.15</span>
+                            <span class="rates-item__spacer" aria-hidden="true"></span>
+                        </li>
+                        <li class="rates-item rates-item--two-col">
+                            <span class="rates-item__name">Coinext</span>
+                            <span class="rates-item__value">$ 14.96</span>
+                            <span class="rates-item__spacer" aria-hidden="true"></span>
+                        </li>
+                    </ul>
+                    <time class="badge-updated badge__color-blue" datetime="2025-07-19T23:45">Actualizado: 19 Julio 23:45</time>
+                </article>
             </div>
         </section>
 

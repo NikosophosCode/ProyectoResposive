@@ -212,10 +212,27 @@ p {
     max-width: 340px; 
     margin: 0 auto; 
 }
+.rates-scroll { 
+    display: flex; 
+    gap: var(--space-6); 
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory; 
+    padding-bottom: 6px; 
+    margin: 0 auto; 
+}
+.rates-scroll > .rates-card { 
+    min-width: 260px; 
+    scroll-snap-align: center; 
+    margin: 0; 
+}
 .rates-card__title { 
     font-size: 20px; 
     margin: 0 0 var(--space-4); 
     color: var(--color-orange);
+}
+
+#fees-title {
+    color: #1A9AF7;
 }
 .rates-list { 
     display: grid; 
@@ -233,6 +250,12 @@ p {
     background: var(--color-gray-100); 
     column-gap: var(--space-4);
 }
+.rates-item--two-col { 
+    grid-template-columns: 1fr auto; 
+}
+.rates-item--two-col .rates-item__spacer { 
+    display: none; 
+}
 .rates-item__name { 
     font-weight: 500; 
 }
@@ -249,34 +272,15 @@ p {
     display: inline-block; 
     margin-top: var(--space-2); 
     font-size: 11px; 
-    background: var(--color-gray-200); 
+    background: #FFE9D4; 
     padding: 4px 8px; 
     border-radius: var(--radius-sm); 
     color: var(--color-warm-black-alt); 
 }
-.rates-card__nav { 
-    position: absolute; 
-    top: 50%; 
-    right: -18px; 
-    transform: translateY(-50%); 
-    width: 36px; 
-    height: 36px; 
-    border-radius: 50%; 
-    border: none;  
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    box-shadow: var(--shadow-card); 
-    cursor: pointer; 
-    background: transparent;
+.badge__color-blue {
+    background: #E7F5FF;
 }
-.rates-card__nav img { 
-    width: 18px; 
-}
-.rates-card__nav:focus-visible { 
-    outline: 2px solid #fff; 
-    outline-offset: 2px; 
-}
+/* nav button removed in scroll version */
 
 /* Dark section */
 .section--dark { 
