@@ -30,8 +30,13 @@
 	--space-9: 40px;
 }
 
-* { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
+* { 
+    box-sizing: border-box; 
+}
+html, body { 
+    margin: 0; 
+    padding: 0; 
+}
 body {
 	font-family: var(--font-family-base);
 	font-size: 15px;
@@ -150,23 +155,6 @@ p {
     padding-bottom: calc(var(--space-9) + 40px); 
 }
 
-@media (min-width: 640px) {
-	.btn--white { 
-        bottom: -32px; 
-    }
-	.hero { 
-        padding-bottom: calc(var(--space-9) + 48px); 
-    }
-}
-
-@media (min-width: 1024px) {
-	.btn--white { 
-        bottom: -36px; 
-    }
-	.hero { 
-        padding-bottom: calc(var(--space-9) + 56px); 
-    }
-}
 .btn--white:hover { 
     transform: translate(-50%, -2px); 
     box-shadow: 0 6px 18px rgba(0,0,0,.12); 
@@ -321,7 +309,7 @@ p {
     text-align: center; 
     color: var(--color-white); 
     padding: var(--space-8) var(--space-5); 
-    background: linear-gradient(180deg, rgba(32,30,28,0.4) 0%, rgba(247, 148, 26, 0.313) 100%), url('../assets/img/bitcoinbaby.jpg') center/cover no-repeat; 
+    background: linear-gradient(180deg, rgba(32,30,28,0.4) 0%, rgba(247, 148, 26, 0.107) 100%), url('../assets/img/bitcoinbaby.jpg') center/cover no-repeat; 
 }
 .promo-banner__title { 
     font-size: 22px; 
@@ -437,4 +425,27 @@ p {
         transition: none!important; 
     }
 }
+
+.value-prop { 
+    position: relative;
+    padding-top: calc(var(--space-9) + 70px); 
+}
+.value-prop__image { 
+    position: absolute; 
+    top: 0; 
+    left: 50%; 
+    /* place the center of the image on the boundary between the two sections */
+    transform: translate(-50%, -50%); 
+    width: clamp(72px, 18vw, 120px); 
+    z-index: 5; 
+    pointer-events: none; /* purely decorativo flotante */
+    margin: 0;
+}
+.value-prop__image img { 
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.25));
+}
+
 

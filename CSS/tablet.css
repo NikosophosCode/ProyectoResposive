@@ -16,4 +16,13 @@
 	.pricing-card__price .amount { font-size: 56px; }
 
 	.footer-links { flex-direction: row; justify-content: center; gap: 40px; }
+	.btn--white { 
+        bottom: -32px; 
+    }
+	.hero { 
+        padding-bottom: calc(var(--space-9) + 48px); 
+    }
+	.value-prop { 
+        padding-top: calc(var(--space-9) + 90px); 
+    }
 }
